@@ -1,0 +1,22 @@
+graph LR
+A[Start] --> B{Landing Page}
+B --> C{Self Service or Agent?}
+C -->|Self Service| D{Enter Personal Details}
+C -->|Agent| E(Agent handles details)
+D --> F{Select Employer}
+F --> G{Upload Documents}
+G --> H{Submit Documents}
+H --> I{Authenticate Documents (System)}
+I -->|Success| J{Confirm Authenticity}
+I -->|Failure| K{Fix Errors & Resubmit}
+J --> L{Select Financing Institution}
+L --> M{Calculate Eligibility (System)}
+M --> N{Display Qualified Amount & Period}
+N --> O{Apply (Enter Amount & Period)}
+O -->|Takeover Loan?| P{Request Additional Statement}
+O -->|New Loan| Q{Skip to Net Take Home}
+P --> G{Upload Financing Institution Statement}
+Q --> R{Display Net Take Home}
+R --> S{Read & Accept Terms & Conditions}
+S --> T{Submit Application}
+T --> End
